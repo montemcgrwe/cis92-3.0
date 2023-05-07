@@ -17,7 +17,8 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
+CSRF_TRUSTED_ORIGINS = [ "https://*.run.app" ] 
 
 
 # Application definition
@@ -119,4 +120,3 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CSRF_TRUSTED_ORIGINS = ['https://*.cloudshell.dev']
-CSRF_TRUSTED_ORIGINS = [ "https://*.run.app" ]
